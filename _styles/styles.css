@@ -1,0 +1,610 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+@import url(http://fonts.googleapis.com/css?family=Lobster|Open+Sans+Condensed:300,700,300italic);
+
+* { 
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box; 
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #fd6245;
+    text-shadow: none;
+}
+
+::selection {
+    background: #fd6245;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+a, a:visited { color:#fd6245; text-decoration:none; border-bottom:1px dotted #fd6245; }
+a.button {
+    background: #fd6245;
+    color: #FFF;
+    padding: .3em 1.1em;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: normal;
+    margin: .6em 0 0 0;
+    text-align: center;
+    clear: both;
+    display: inline-block;
+}
+.noborder { border:none; }
+.lobster { font-family:'Lobster', cursive; -webkit-text-stroke: .25px; }
+.blur { -webkit-filter:blur(5px); }
+.grayscale { -webkit-filter:grayscale(50%); }
+.unbold { font-weight:normal; }
+.purple { color:#700c4c; }
+.coral { color:#fd6245; }
+.text { font-size:1.4em; max-width:700px; margin:0 auto; padding:2em; background:rgba(0,0,0,.06); }
+.hidden-br { display:none; }
+
+body { 
+    background:#8bb8e2 url(images/bgpaper2.png) top left repeat; 
+    color:#700c4c; 
+    font-family:'Open Sans Condensed', sans-serif; 
+}
+
+.section { min-height:700px; width:100%; position:relative; overflow-y:auto; border-bottom:1px solid #CCC; }
+.section.fixed { position:fixed; top:0; }
+.center { text-align:center; width:54%; margin:0 auto; position:relative; top:15%; z-index:500; }
+
+.col { width:30%; margin:0 0 0 3.33333%; padding-left:3.33333%; float:left; }
+.col:nth-of-type(1) { padding-left:0; margin:0; }
+.divider { clear:both; margin:1em auto; }
+
+.header { width:100%; background:#700c4c; position:fixed; top:0; left:0; z-index:5000; border-bottom:1px solid #390024; opacity:.96; color:#FFF; }
+.header ul { width:100%; max-width:800px; margin:0 auto; height:60px; list-style:none; padding:0; }
+.header ul li { float:left; width:18%; padding:0; position:relative; }
+.header ul li.logo { width:140px; height:100%; margin:0 20px; }
+.header ul li a { padding:20px 20px 23px 20px; width:100%; height:100%; display:block; text-align:center; cursor:pointer; color:#FFF; }
+.header ul li a:hover, .header ul li.selected a { border-bottom:3px solid #FFF; padding-bottom:20px; }
+.header ul li.logo a:hover, .header ul li.selected.logo a { border-bottom:none; padding-bottom:23px; }
+.header ul li img { position:absolute; top:-22px; left:50%; margin-left:-55px; }
+
+.scroll { 
+    width:100%; 
+    position:fixed; 
+    bottom:20px;
+    text-align:center; 
+    font-size:1.4em; 
+    z-index:2000;
+}
+.scroll ul { 
+    position:absolute;
+    width:55px;
+    height:39px;
+    overflow:hidden;
+    left:0; 
+    bottom:0; 
+    list-style:none; 
+    margin:0; 
+    padding:.4em .4em .4em .8em; 
+    background:#700c4c; 
+    font-size:.8em; 
+    font-family:'Open Sans Condensed', sans-serif;
+    border-top-right-radius:4px;
+    border-bottom-right-radius:4px;
+}
+.scroll ul li { float:left; margin-right:.6em; opacity:0.45; cursor:pointer; text-align:center; -webkit-transition:opacity .3s linear; }
+.scroll ul li:hover { opacity:1; -webkit-transition:opacity .3s linear; }
+.scroll ul li.info { margin-right:1.2em; }
+.scroll ul li.popout { display:none; }
+.scroll ul li.nohover:hover { opacity:.45; }
+.scroll ul li:first-child { border:none; }
+.scroll p { 
+    width:40%;
+    left:30%;
+    position:relative;
+    text-align:center; 
+    margin:0;
+    cursor:pointer;
+    opacity:.45;
+    -webkit-transition:opacity .3s ease-in;
+    -moz-transition:opacity .3s ease-in;
+    -ms-transition:opacity .3s ease-in;
+    -o-transition:opacity .3s ease-in;
+    transition:opacity .3s ease-in;
+}
+.scroll p:hover { 
+    opacity:1.0;
+    -webkit-transition:opacity .3s ease-in;
+    -moz-transition:opacity .3s ease-in;
+    -ms-transition:opacity .3s ease-in;
+    -o-transition:opacity .3s ease-in;
+    transition:opacity .3s ease-in; 
+}
+
+.section h2 { margin:0; }
+.section h3 { margin:0 0 2em 0; }
+
+.section.lead { 
+    background:url(images/names.jpg) no-repeat fixed center center;
+    background-size:auto 100%; 
+    color:#FFF; 
+    text-shadow:1px 1px 3px #666; 
+}
+.section.lead .content { width:100%; height:53%; position:relative; top:35%; z-index:20; }
+/*.section.lead h1 { margin:0 0 0 6%; }*/
+.section.lead h1 { width:75%; max-width:850px; min-width:500px; margin:0 auto; }
+.section.lead h1 img { width:100%; }
+.section.lead p.story { position:relative; top:35%; width:100%; margin:0; font-size:3.2em; text-align:center; }
+/*.section.lead img { min-width:1475px; width:125%; min-height:100%; position:absolute; top:0; left:-25%; z-index:1; }*/
+
+.section.ourstory { color:#700c4c; }
+.caroufredsel_wrapper { height:auto; min-height:420px; }
+.section.ourstory .slide-cont { width:100%; max-width:750px; margin:3em auto 0 auto; position:relative; }
+.section.ourstory .slide-cont span { color:#700c4c; font-weight:bold; font-size:3em; cursor:pointer; position: absolute; top:45%; }
+.section.ourstory .slide-cont span.prev-slide { 
+    left:-42px; 
+    height:80px; 
+    width:80px; 
+    background:url(images/arrows.png) left top no-repeat;
+    z-index:10;
+    -webkit-transition:left .15s ease-out;
+    -moz-transition:left .15s ease-out;
+    -ms-transition:left .15s ease-out;
+    -o-transition:left .15s ease-out;
+    transition:left .15s ease-out;
+}
+.section.ourstory .slide-cont span.next-slide { 
+    right:-42px; 
+    height:80px; 
+    width:80px; 
+    background:url(images/arrows.png) -80px top no-repeat; 
+    z-index:10;
+    -webkit-transition:right .15s ease-out;
+    -moz-transition:right .15s ease-out;
+    -ms-transition:right .15s ease-out;
+    -o-transition:right .15s ease-out;
+    transition:right .15s ease-out;
+}
+.section.ourstory .slide-cont span.prev-slide:hover { 
+    left:-50px;
+    -webkit-transition:left .25s ease-in;
+    -moz-transition:left .25s ease-in;
+    -ms-transition:left .25s ease-in;
+    -o-transition:left .25s ease-in;
+    transition:left .25s ease-in;
+}
+.section.ourstory .slide-cont span.next-slide:hover { 
+    right:-50px;
+    -webkit-transition:right .25s ease-in;
+    -moz-transition:right .25s ease-in;
+    -ms-transition:right .25s ease-in;
+    -o-transition:right .25s ease-in;
+    transition:right .25s ease-in;
+}
+.section.ourstory .slide-cont .slider { width:100%; position:relative; z-index:500; }
+.section.ourstory .slide-cont .slider div { 
+    height:460px;
+    padding:1.2em; 
+    color:#444;
+    background:url(images/lightpaperfibers.png) left top repeat;
+}
+.section.ourstory .slide-cont .slider div .photo { width:100%; height:260px; box-shadow:inset 1px 1px 2px #777; }
+.section.ourstory .slide-cont .slider div .photo.one { background:url(../_images/Story1.jpg) center top no-repeat; }
+.section.ourstory .slide-cont .slider div .photo.two { background:url(../_images/Story2.jpg) center top no-repeat; }
+.section.ourstory .slide-cont .slider div .photo.three { background:url(../_images/Story3.jpg) center top no-repeat; }
+.section.ourstory .slide-cont .slider div .photo.four { background:url(../_images/StoryBak2.jpg) center top no-repeat; }
+.section.ourstory .slide-cont .slider div .photo.five { background:url(../_images/Story2.jpg) center top no-repeat; }
+.section.ourstory .slide-cont .slider div h4 { position:relative; margin:0; color:#FFF; font-weight:normal; font-size:2em; left:12px; top:-43px; text-shadow:1px 1px 3px #666; }
+.section.ourstory .slide-cont .slider div p { margin:0; position:relative; top:-31px; }
+
+.section.thewedding { top:200%; }
+.section.thewedding .content ul.thecouple { margin:0; padding:0; list-style:none; overflow:hidden; }
+.section.thewedding .content ul.thecouple li { width:45%; margin-left:10%; float:left; }
+.section.thewedding .content ul.thecouple li:first-child { margin:0; }
+.section.thewedding .content ul.thecouple li .title { font-size:1.2em; }
+.section.thewedding .content ul.thecouple li h3 { font-size:3em; white-space:nowrap; margin-bottom:1em; line-height:1; }
+.section.thewedding .content .col ul { margin:0; padding:0; list-style:none; font-size:1.2em; }
+.section.thewedding .content .col ul li { text-align:left; padding:0 0 0 1.2em; margin-bottom:.25em; }
+.section.thewedding .content .col h3 { margin:0 0 .4em 0; border-bottom:1px solid #700c4c; }
+.section.thewedding .ushers { clear:both; margin-top:1em; width:100%; text-align:center; }
+.section.thewedding .ushers h3 { margin:0; }
+.section.thewedding .ushers span { display:inline-block; margin-right:2em; font-size:1.2em; }
+.section.thewedding ul.tabs { 
+    width:100%; 
+    max-width:600px; 
+    margin:2em auto 0 auto; 
+    padding:0; 
+    list-style:none; 
+    clear:both; 
+    overflow:hidden;
+    border-bottom:1px solid #CCC; 
+}
+.section.thewedding ul.tabs li { width:25%; text-align:center; float:left; padding:18px 1.6em; font-size:1.1em; cursor:pointer; border-bottom:none;}
+.section.thewedding ul.tabs li.selected { border-bottom:5px solid #700c4c; padding-bottom:13px; }
+.section.thewedding .content { clear:both; margin:2em auto 0 auto; padding:2em; display:none; width:100%; max-width:600px; min-height:320px; overflow:hidden; }
+.section.thewedding .content.selected { display:block; }
+.section.thewedding .content .col-2 { width:45%; min-height:230px; float:left; padding-left:5%; margin-left:5%; border-left:1px dotted #fd6245; position:relative; text-align:left; font-size:1.4em; }
+.section.thewedding .content .col-2.align-right,
+.section.thewedding .content .col-2.align-right h3 { text-align:right; }
+.section.thewedding .content .col-2:first-child { margin:0; padding:0; border:0; }
+.section.thewedding .content .col-2 h3 { margin:0; padding:0; line-height:.5; width:100%; text-align:left; padding-bottom:.6em; color:#fd6245; }
+.section.thewedding .content .col-2 ul { margin:0; padding:0; list-style:none; }
+.section.thewedding .content .col-2 ul li { margin-bottom:.5em; font-size:.75em; font-weight:700; }
+.section.thewedding .content .ushers { width:100%; clear:both; padding-top:1.75em; text-align:center; }
+.section.thewedding .content .ushers h3 { color:#fd6245; width:100%; margin-bottom:.2em; font-size:2.25em; }
+.section.thewedding .content .ushers span { display:inline-block; margin-right:1.25em; font-size:1.05em; font-weight:700; }
+
+.section.guestinfo { }
+.section.guestinfo ul.tabs { 
+    width:100%; 
+    max-width:600px; 
+    margin:2em auto 1.4em auto; 
+    padding:0; 
+    list-style:none; 
+    clear:both; 
+    overflow:hidden;
+    border-bottom:1px solid #CCC; 
+}
+.section.guestinfo ul.tabs li { width:25%; text-align:center; float:left; padding:18px 1.6em; font-size:1.1em; cursor:pointer; border-bottom:none;}
+.section.guestinfo ul.tabs li.selected { border-bottom:5px solid #700c4c; padding-bottom:13px; }
+.section.guestinfo .content { clear:both; margin:2em auto 0 auto; display:none; width:100%; max-width:600px; }
+.section.guestinfo .content.selected { display:block; }
+.section.guestinfo .content iframe, 
+#map-canvas,
+#cmap,
+#rmap,
+#hmap
+    { width:60%; max-width:600px; height:400px; box-shadow:0px 1px 2px #333; float:left; }
+.section.guestinfo .content div.reglogos { width:60%; max-width:600px; height:400px; float:left; }
+.section.guestinfo .content .reglogos img { 
+    width:100%;
+    background:#EEE;
+    background:rgba(255,255,255,.5);
+    border-radius:12px;
+    border:8px solid transparent; 
+    border:8px solid rgba(255,255,255,0); 
+    -webkit-transition:border .25s ease-out;
+    -moz-transition:border .25s ease-out;
+    -ms-transition:border .25s ease-out;
+    -o-transition:border .25s ease-out;
+    transition:border .25s ease-out;
+}
+.section.guestinfo .content .reglogos img:first-child { margin:0 0 15px 0; }
+.section.guestinfo .content .reglogos img:hover {
+    border:8px solid #fd6245;
+    -webkit-transition:border .25s ease-in;
+    -moz-transition:border .25s ease-in;
+    -ms-transition:border .25s ease-in;
+    -o-transition:border .25s ease-in;
+    transition:border .25s ease-in;
+}
+.section.guestinfo .content > div { width:35%; float:right; text-align:left; }
+.section.guestinfo .content div h4 { 
+    margin: 0; 
+    font-family:'Lobster', cursive; 
+    -webkit-text-stroke: .25px; 
+    line-height:1;
+    font-size:2em;
+}
+.section.guestinfo .content div h6 { margin:0; padding:0; font-size:1em; }
+.section.guestinfo .content div p.subtitle { font-style:italic; font-weight:bold; font-size:.9em; margin:1em 0; color:#444; line-height:1.2; }
+.section.guestinfo .content div p.subtitle span { font-size:1.2em; }
+.section.guestinfo .content div p { line-height:1.3; }
+.section.guestinfo .email { clear:both; width:100%; text-align:center; padding-top:2em; }
+.section.guestinfo .email a { text-decoration:none; border:none; color:#700c4c; display:inline-block; }
+.section.guestinfo .email span { font-size:1.25em; margin-right:.25em; }
+
+.section.photos {}
+
+.section.seeyou .iowa { width:100%; max-width:600px; margin:10% auto 0 auto; }
+
+.pageScroll { display: none; }
+
+@media only screen and (max-width: 1300px) {
+    .section.lead { background-size:auto; }
+    .section.thewedding .content ul.thecouple li h3 { font-size:2.25em; }
+}
+
+@media only screen and (max-width: 980px) {
+    body { font-size:.85em; }
+    .center { width:80%; }
+    .hidden-br { display: block; }
+    .section.thewedding .content .col ul li { padding:0; }
+}
+
+@media only screen and (min-width: 601px) {
+    
+}
+
+@media only screen and (max-width: 600px) {
+    body { font-size:.8em; }
+
+    .section.lead { 
+        background:none;
+    }
+    
+    .section.guestinfo .content iframe, #map-canvas, #cmap, #rmap, #hmap {
+        width:100%; height:300px;
+    }
+    .section.guestinfo .content div.reglogos {
+        width:100%; height:auto;
+    }
+    .section.guestinfo .content > div { clear:both; width:100%; margin-top:1.2em; }
+
+    .scroll, .header, .section.lead, .section.ourstory, .section.thewedding, .section.seeyou { display:none !important; background:none; }
+}
+
+@media only screen and (min-width:1110px) {
+    .section.lead { background-size:cover; }
+}
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow:none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

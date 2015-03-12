@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Meagan and Trevor | October 19, 2013</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="icon" type="image/png" href="favicon.ico">
+
+        <link rel="stylesheet" type="text/css" href="_styles/normalize.css">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="_styles/styles.css">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+        <script src="_scripts/vendor/modernizr-2.6.1.min.js"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBL58VQ6QsL_4OggU2kN6xxwFQr4wX_frI&sensor=false"></script>
+        <script type="text/javascript">
+            function initialize() {
+                // Church
+                var loc = new google.maps.LatLng(42.533832,-96.380334);
+                var mapOptions = {
+                    center: loc,
+                    zoom: 15,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                var map = new google.maps.Map(document.getElementById("cmap"),
+                    mapOptions);
+                var marker = new google.maps.Marker({
+                    position: loc,
+                    map: map,
+                    optimized: false,
+                    icon: "_images/logoicon.png"
+                });
+
+                // Country Club
+                var loc2 = new google.maps.LatLng(42.492036,-96.492426);
+                var map2Options = {
+                    center: loc2,
+                    zoom: 14,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                var map2 = new google.maps.Map(document.getElementById("rmap"),
+                    map2Options);
+                var marker2 = new google.maps.Marker({
+                    position: loc2,
+                    map: map2,
+                    optimized: false,
+                    icon: "_images/logoicon.png"
+                });
+
+                $('.tabs li').on('click', function(){
+                    google.maps.event.trigger(map2, "resize");
+                    map2.setCenter(marker2.getPosition());
+                });
+
+                // Hotels
+                var loc3 = new google.maps.LatLng(42.491783,-96.444168);
+                var h1 = new google.maps.LatLng(42.504712,-96.495056);
+                var h2 = new google.maps.LatLng(42.493028,-96.407845);
+                var h3 = new google.maps.LatLng(42.489697,-96.422311);
+                var map3Options = {
+                    center: loc3,
+                    zoom: 11,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                var map3 = new google.maps.Map(document.getElementById("hmap"),
+                    map3Options);
+                var marker3 = new google.maps.Marker({
+                    position: loc3,
+                    map: map3,
+                    optimized: false,
+                    icon: "_images/blank.png"
+                });
+                var marker3a = new google.maps.Marker({
+                    position: h1,
+                    map: map3,
+                    optimized: false,
+                    icon: "_images/logoicon.png"
+                });
+                var marker3b = new google.maps.Marker({
+                    position: h2,
+                    map: map3,
+                    optimized: false,
+                    icon: "_images/logoicon.png"
+                });
+                var marker3c = new google.maps.Marker({
+                    position: h3,
+                    map: map3,
+                    optimized: false,
+                    icon: "_images/logoicon.png"
+                });
+
+                $('.tabs li').on('click', function(){
+                    google.maps.event.trigger(map3, "resize");
+                    map3.setCenter(marker3.getPosition());
+                });
+            };
+
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <div class="header pageScrollerNav">
+            <ul>
+                <li id="two" class="story" data-scroll="2"><a hfref="#" class="noborder">Our Story</a></li>
+                <li id="three" class="wedding" data-scroll="3"><a hfref="#" class="noborder">Wedding Party</a></li>
+                <li id="one" class="logo" data-scroll="1"><a hfref="#" class="noborder"><img src="_images/hlogo.png" alt=""></a></li>
+                <li id="four" class="info" data-scroll="4"><a hfref="#" class="noborder">Guest Info</a></li>
+                <li id="five" class="seeyou" data-scroll="5"><a hfref="#" class="noborder">See You There</a></li>
+            </ul>
+        </div>
+
+        <div class="scroll lobster">
+            <!--<ul class="mininav">
+                <li class="info"><span class="icon-reorder"></span></li>
+                <li class="popout">The Wedding</li>
+                <li class="nohover popout">|</li>
+                <li class="popout">RSVP</li>
+            </ul>-->
+            <p>Scroll<br /><span class="icon-chevron-down purple"></span></p>
+        </div>
+
+        <div id="one" class="section lead">
+            <div class="content">
+                <!--<h1 class="lobster">Trevor <span class="purple">&amp;</span> Meagan</h1>-->
+                <!--<p class="story">A Love Story</p>-->
+            </div>
+            <!--<img src="/weddingsite/_images/PlaceHolder.jpg" alt="Meagan and Trevor" class="grayscale">-->
+        </div>
+
+        <div id="two" class="section ourstory">
+            <div class="center">
+                <h2 class="lobster">Our Story</h2>
+                <!--<h3 class="unbold">The Beginning</h3>-->
+                
+                <div class="slide-cont">
+                    <span class="prev-slide"></span>
+                    <div class="slider">
+                        <div>
+                            <div class="photo one"></div>
+                            <h4 class="lobster">The Beginning</h4>
+                            <p>On Saturday, December 5, Meagan went out with some friends wearing her ugly Christmas sweater. Trevor and his friends also went out that night. When Meagan and Trevor first met that night, he teased her ugly sweater. They talked about dogs, Christmas, and ugly sweaters before Trevor finally asked for her phone number.</p>  
+                        </div>
+                        <div>
+                            <div class="photo two"></div>
+                            <h4 class="lobster">The First Year</h4>
+                            <p>After just a few weeks of dating, Meagan and Trevor rarely had a day they didn't spend together. Trevor's parents visited Ames to meet Meagan, and Trevor drove to Sioux City over spring break to meet Meagan's parents. Trevor graduated and decided to stay in Ames, and Meagan began her final year of college. Through new jobs and classes, they continued to spend as much time as possible together.</p>  
+                        </div>
+                        <div>
+                            <div class="photo three"></div>
+                            <h4 class="lobster">A Busy Spring</h4>
+                            <p>The next year, Meagan and Trevor had a busy spring. Meagan was graduating from ISU and wanted to pursue a nursing degree at South Dakota State. Trevor had barely even seen South Dakota, but unable to see Meagan leave for a year, he decided to follow her. Within the span of a few weeks, they enrolled Meagan in nursing school, found Trevor a job, found a new apartment, packed everything up and moved.</p>  
+                        </div>
+                        <div>
+                            <div class="photo four"></div>
+                            <h4 class="lobster">Sioux Falls</h4>
+                            <p>Trevor and Meagan soon settled into their new lives in South Dakota. Meagan studied hard at SDSU for her nursing degree while Trevor began his career as a web developer at Lawrence &amp; Schiller. They found some new friends through school and work, and in their free time went out to explore Sioux Falls or traveled to Sioux City to see Meagan's family. After a busy year of nursing school, Meagan graduated and took a position at Sanford Health.</p>  
+                        </div>
+                        <div>
+                            <div class="photo five"></div>
+                            <h4 class="lobster">The Proposal</h4>
+                            <p>In February 2013, Meagan and Trevor went out for an early Valentines day celebration. After a nice dinner Trevor convinced Meagan to go for a walk through Falls Park, which was difficult due to the freezing temperature that night. The falls were lit up and when they stopped to take photos, Trevor finally got the courage to get down on one knee and ask Meagan to marry him. Meagan said 'Yes', and after their initial excitement, they ran back to the warm car to call their friends and family.</p>  
+                        </div>
+                    </div>
+                    <span class="next-slide"></span>
+                </div>
+            </div>
+        </div>
+
+        <div id="three" class="section thewedding">
+            <div class="center">
+                <h2 class="lobster">The Wedding Party</h2>
+                <!--
+                    The Wedding Party Here
+                    Basically a program?
+                
+                <ul class="tabs">
+                    <li id="parents" class="selected">Parents</li>
+                    <li id="bridesmaids">Bridesmaids</li>
+                    <li id="groomsmen">Groomsmen</li>
+                    <li id="ushers">Ushers</li>
+                </ul>-->
+                <div class="groomsmen content selected">
+                    <div class="col-2 align-right">
+                        <h3 class="lobster">Bridesmaids</h3>
+                        <ul>
+                            <li>Maren Wolff - Matron of Honor</li>
+                            <li>Christina Wenande</li>
+                            <li>Lauren Miller</li>
+                            <li>Laura Hanrahan</li>
+                            <li>Kara Whited</li>
+                            <li>Ella Hunsberger - Flower Girl</li>
+                        </ul>
+                    </div>
+                    <div class="col-2">
+                        <h3 class="lobster">Groomsmen</h3>
+                        <ul>
+                            <li>Ben Sloan - Best Man</li>
+                            <li>Andy Michels</li>
+                            <li>Kofi Sarpong</li>
+                            <li>Mitch Kleve</li>
+                            <li>Matt Fredrikson</li>
+                            <li>Sam Bakker - Ring Bearer</li>
+                        </ul>
+                    </div>
+                    <div class="ushers">
+                        <h3 class="lobster">Ushers</h3>
+                        <span>Jon Birkel</span>
+                        <span>Dan Stoecklein</span>
+                        <span>Cory Bunch</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="four" class="section guestinfo">
+            <div class="center">
+                <h2 class="lobster">Guest Information</h2>
+                <ul class="tabs">
+                    <li id="ceremony" class="selected">Ceremony</li>
+                    <li id="reception">Reception</li>
+                    <li id="hotel">Hotel</li>
+                    <li id="registry">Registry</li>
+                </ul>
+                
+                <div class="ceremony content selected">
+                    <div id="cmap"></div>
+
+                    <div>
+                        <h4>The Ceremony</h4>
+                        <h6>October 19, 2013 at 2 pm</h6>
+                        <p class="subtitle"><span>St. Michael's Parish</span><br />2223 Indian Hills Dr.<br />North Sioux City, SD</p>
+                        <p>St. Michael Catholic Parish has been Meagan's family church since she was a toddler.</p>
+                        <a href="https://maps.google.com/maps?daddr=St+Michael+Church,+2223+Indian+Hills+Drive,+Sioux+City,+IA+51104&hl=en&sll=42.533909,-96.380332&sspn=0.013519,0.033023&geocode=CbcUzS674SiRFRUEiQIdVFpB-ilNujxtzOKNhzHWU8E-On5BMQ&gl=us&mra=ls&t=m&z=16" class="button" target="_blank">Get Directions</a>
+                    </div>
+                </div>
+                <div class="reception content">
+                    <div id="rmap"></div>
+                    
+                    <div>
+                        <h4>The Reception</h4>
+                        <h6>Following the ceremony</h6>
+                        <p class="subtitle"><span>Dakota Dunes Country Club</span><br />960 S Dakota Dunes Blvd.<br />Dakota Dunes, SD</p>
+
+                        <a href="https://maps.google.com/maps?daddr=%2B42%C2%B0+29'+6.07%22,+-96%C2%B0+29'+30.46%22+(42.485019,+-96.491795)&hl=en&ie=UTF8&sll=42.486245,-96.491922&sspn=0.006765,0.016512&geocode=Ce04mVRmUA3EFRtFiAId7aY_-g&t=h&gl=us&mra=ls&z=17" class="button" target="_blank">Get Directions</a>
+                    </div>
+                </div>
+                <div class="hotel content">
+                    <div id="hmap"></div>
+
+                    <div>
+                        <h4>Where to Stay</h4>
+                        <p class="subtitle"><span>Country Inn &amp; Suites</span><br />151 Tower Rd<br />Dakota Dunes, SD<br /><a href="tel:605-232-3500">(605) 232-3500</a></p>
+                        <p class="subtitle"><span>Stoney Creek Inn</span><br />300 3rd St<br />Sioux City, IA<br /><a href="tel:712-234-1100">(712) 234-1100</a></p>
+                        <p class="subtitle"><span>Hilton Garden Inn</span><br />1132 Larsen Park Rd<br />Sioux City, IA<br /><a href="tel:712-255-4200">(712) 255-4200</a></p>
+
+                        <p>A block of rooms is reserved at the <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&ved=0CFIQFjAA&url=http%3A%2F%2Fwww.countryinns.com%2Fnorth-sioux-city-hotel-sd-57049%2Fsddakota&ei=9zixUdnhILTKyQHgqYHoDA&usg=AFQjCNHdI7tDqzmbhL7w6kNGhDfKzbRP0w&sig2=2bw0bXBYuxNGy0q1jVvHnQ" target="_blank">Country Inn &amp; Suites</a> in Dakota Dunes under the couple's name.</p>
+                    </div>
+                </div>
+                <div class="registry content">
+                    <div class="reglogos">
+                        <a href="https://www.younkers.com/GiftRegistryItemView?catalogId=10051&externalId=3799392&externalId=3799392&externalId=3799392&externalId=3799392&langId=-1&storeId=10001&krypto=B9oRbYLTJmfl4VdugJrPchsDw1VL1BVf4GAwsQBYtI220NpNVCpxmC3yoU66mdyxpP2J%2FTUVG%2FO0%0AcAY%2B%2BFzOnx6oDUnTaGKSuAT5FcUCTPM%3D" class="noborder" target="_blank" title="Younker's"><img src="_images/younkers.png" alt="Younker's"></a>
+                        <a href="http://www.target.com/wedd/registry/hnPZ6Hjs-FxQHTBPkHInhA" class="noborder" target="_blank" title="Target"><img src="_images/target.png" alt="Target"></a>
+                    </div>
+                    <div>
+                        <h4>The Registry</h4>
+
+                        <p>The couple is registered at <a href="https://www.younkers.com/GiftRegistryItemView?catalogId=10051&externalId=3799392&externalId=3799392&externalId=3799392&externalId=3799392&langId=-1&storeId=10001&krypto=B9oRbYLTJmfl4VdugJrPchsDw1VL1BVf4GAwsQBYtI220NpNVCpxmC3yoU66mdyxpP2J%2FTUVG%2FO0%0AcAY%2B%2BFzOnx6oDUnTaGKSuAT5FcUCTPM%3D" target="_blank" title="Younker's">Younker's</a> and <a href="http://www.target.com/wedd/registry/hnPZ6Hjs-FxQHTBPkHInhA" target="_blank" title="Target">Target</a>.</p>
+                    </div>
+                </div>
+
+                 <div class="email">
+                    <a href="mailto:trevor.patch@gmail.com"><span class="icon-envelope-alt"></span>  Have a question? Get in touch!</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="five" class="section seeyou">
+            <div class="center">
+                <img src="_images/iowa.png" title="See you there!" class="iowa" />
+            </div>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="_scripts/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+        <script src="_scripts/plugins.js"></script>
+        <script src="_scripts/vendor/fred.js"></script>
+        <script src="_scripts/scripts.js"></script>
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-42942004-1']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+    </body>
+</html>
